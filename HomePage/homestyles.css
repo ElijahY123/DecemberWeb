@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Libre+Barcode+128+Text&family=Special+Elite&display=swap');
+
+#Fonts
+.special-elite-regular {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .jaini-purva-regular {
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .libre-barcode-128-text-regular {
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+:root{
+    --header-height: 3.5rem;
+
+    --first-color: hsl(0, 0%, 60%);
+    --first-color-light: hsl(0, 0%, 70%);
+    --first-color-lighten: hsl(0, 0%, 80%);
+    --green-color: hsl(155, 100%, 18%);
+
+
+    --body-font: "Special Elite", system-ui;
+    --second-font: "Libre barcode 128 Text", system-ui;
+    --biggest-font-size: 6rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem
+
+
+    --font-regular: 400;
+    --font-semi-bold: 600;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media screen  and (min-width: 1150px) {
+    :root {
+        --biggest-font-size: 17rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }    
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--first-color);
+    color: var(--green-color);
+}
+
+ul {
+    list-style: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: 1.5rem;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    color: var(--green-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__close,
+.nav__toggle,
+.nav__actions {
+    display: flex;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.nav__actions {
+    column-gap: .5rem;
+}
+
+@media screen and (max-width: 1150px) {
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: var(--first-color);
+        width: 80%;
+        height: 100%;
+        box-shadow: -2px 0 12px hsla(0, 0%, 0%, .2);
+        padding: 6rem 3rem 0;
+        transition: right .4s;
+    }
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.nav__link {
+    color: var(--green-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__close {
+    position: absolute;
+    top: 1.15rem;
+    right: 1.5rem;
+}
