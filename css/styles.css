@@ -112,7 +112,6 @@ img {
 }
 
 .nav__close, 
-.nav__toggle, 
 .nav__actions {
   display: flex;
   font-size: 1.25rem;
@@ -123,14 +122,12 @@ img {
   column-gap: .5rem;
 }
 
-.nav__user:hover {
-  color: hsl(155, 100%, 18%);
-  transition: all 0.3s ease;
+.nav__cart,
+.nav__user{
+  color: var(--black-color);
 }
-.nav__cart:hover {
-  color: hsl(155, 100%, 18%);
-  transition: all 0.3s ease;
-}
+.nav__user:hover, 
+.nav__cart:hover,
 .nav__toggle:hover {
   color: hsl(155, 100%, 18%);
   transition: all 0.3s ease;
@@ -161,7 +158,6 @@ img {
   color: var(--black-color);
   font-weight: var(--font-semi-bold);
 }
-
 .nav__link:hover {
   color: hsl(155, 100%, 18%);
   transition: all 0.3s ease;
@@ -221,13 +217,6 @@ img {
   border-radius: 50%;
 }
 
-.home__title {
-  position: absolute;
-  font-size: var(--biggest-font-size);
-  font-family: var(--second-font);
-  font-weight: var(--font-regular);
-}
-
 .home__img {
   width: 250px;
   filter: drop-shadow(-8px 8px 16px hsla(34, 51%, 8%, .4));
@@ -282,9 +271,6 @@ img {
   .home__img {
     width: 200px;
     margin-bottom: 3rem;
-  }
-  .home__title {
-    font-size: 5rem;
   }
   .home__circle {
     width: 240px;
