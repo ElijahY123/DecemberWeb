@@ -1,22 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Libre+Barcode+128+Text&family=Special+Elite&display=swap');
-
-#Fonts
-.special-elite-regular {
-    font-family: "Special Elite", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .jaini-purva-regular {
-    font-family: "Jaini Purva", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .libre-barcode-128-text-regular {
-    font-family: "Libre Barcode 128 Text", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Libre+Barcode+128+Text&family=Special+Elite&family=Rubik+Maps&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -26,13 +9,13 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(0, 0%, 60%);
   --first-color-light: hsl(0, 0%, 80%);
-  --first-color-lighten: hsl(0, 0%, 90%);
+  --first-color-lighten: hsl(155, 90%, 16%);
   --black-color: hsl(0, 0%, 4%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Special Elite", system-ui;
-  --second-font: "Jaini Purva", system-ui;
+  --second-font: "Rubik Maps", system-ui;
   --biggest-font-size: 6rem;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
@@ -64,8 +47,7 @@
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--first-color);
-  color: var(--black-color);
+  background: radial-gradient(#bbbbbb 0%, #090a0f 100%);
 }
 
 ul {
@@ -77,6 +59,7 @@ a {
 }
 
 img {
+  filter: drop-shadow(0 0 10px white);
   display: block;
   max-width: 100%;
   height: auto;
@@ -111,7 +94,7 @@ img {
   align-items: center;
 }
 
-.nav__close, 
+.nav__close,
 .nav__actions {
   display: flex;
   font-size: 1.25rem;
@@ -181,7 +164,7 @@ img {
 /* Background header */
 .bg-header {
   background-color: var(--first-color);
-  box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
+  filter: drop-shadow(0 0 10px white);
 }
 
 /*=============== HOME ===============*/
@@ -198,28 +181,16 @@ img {
   display: grid;
 }
 
-.home__circle {
+.home__title {
   position: absolute;
-  inset: 0;
-  width: 280px;
-  height: 280px;
-  border: 3px solid var(--first-color-lighten);
-  border-radius: 50%;
-  margin-inline: auto;
-  display: grid;
-  place-items: center;
-}
-
-.home__subcircle {
-  width: 246px;
-  height: 246px;
-  border: 12px solid var(--first-color-light);
-  border-radius: 50%;
+  font-size: var(--biggest-font-size);
+  font-family: var(--second-font);
+  font-weight: var(--font-regular);
 }
 
 .home__img {
   width: 250px;
-  filter: drop-shadow(-8px 8px 16px hsla(34, 51%, 8%, .4));
+  filter: drop-shadow(0 0 10px white);
   margin: 0 auto 2rem;
 }
 
@@ -243,6 +214,7 @@ img {
   bottom: 0;
   font-size: 1.5rem;
   color: var(--black-color);
+  filter: drop-shadow(0 0 10px white);
 }
 
 .swiper-button-prev {
@@ -272,13 +244,8 @@ img {
     width: 200px;
     margin-bottom: 3rem;
   }
-  .home__circle {
-    width: 240px;
-    height: 240px;
-  }
-  .home__subcircle {
-    width: 206px;
-    height: 206px;
+  .home__title {
+    font-size: 5rem;
   }
 }
 
@@ -335,16 +302,6 @@ img {
     max-width: 1100px;
     margin-inline: auto;
   }
-  .home__circle {
-    width: 550px;
-    height: 550px;
-    border-width: 4px;
-  }
-  .home__subcircle {
-    width: 485px;
-    height: 485px;
-    border-width: 20px;
-  }
   .home__article {
     width: 450px;
     scale: .55;
@@ -362,7 +319,6 @@ img {
     right: calc(50% - 12rem);
     font-size: 2rem;
   }
-
   ::-webkit-scrollbar {
     width: .6rem;
     background-color: hsl(0, 0%, 75%);
