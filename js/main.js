@@ -72,3 +72,30 @@ sr.reveal(`.home__circle`, {scale: 1.5, delay: 300})
 sr.reveal(`.home__subcircle`, {scale: 1.5, delay: 500})
 sr.reveal(`.home__title`, {scale: 1, origin: 'bottom', delay: 1200})
 sr.reveal(`.swiper-button-prev, .swiper-button-next`, {origin: 'bottom'})
+
+/*=============== HOODIES TIMER ===============*/
+const countDownDate = new Date("Dec 21, 2024 00:00:00").getTime();
+
+const interval = setInterval(() => {
+   const now = new Date().getTime();
+   const duration = countDownDate - now;
+
+   if (duration < 0) {
+      clearInterval(interval);
+      updateDuration(0);
+      return;
+   }
+   updateDuration(duration);
+}, 1000);
+
+function updateDuration(duration) {
+   const days = Math.floor(duration / (1000 * 60 * 60 *24));
+   const hours = Math.floor((duration % (1000 * 60 * 60 *24)) / (1000 * 60 * 60));
+   const minutes = Math.floor((duration % (1000 * 60 * 60)) / (1000 * 60));
+   const seconds = Math.floor((duration % (1000 * 60)) / 1000);
+
+   document.getElementById("days").innerHTML = days;
+   document.getElementById("hours").innerHTML = hours;
+   document.getElementById("minutes").innerHTML = minutes;
+   document.getElementById("seconds").innerHTML = seconds;
+}
