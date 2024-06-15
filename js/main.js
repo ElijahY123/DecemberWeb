@@ -74,7 +74,7 @@ sr.reveal(`.home__title`, {scale: 1, origin: 'bottom', delay: 1200})
 sr.reveal(`.swiper-button-prev, .swiper-button-next`, {origin: 'bottom'})
 
 /*=============== HOODIES TIMER ===============*/
-const countDownDate = new Date("Dec 21, 2024 00:00:00").getTime();
+const countDownDate = new Date("September 22, 2024 00:00:00").getTime();
 
 const interval = setInterval(() => {
    const now = new Date().getTime();
