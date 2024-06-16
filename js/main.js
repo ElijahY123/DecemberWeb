@@ -99,3 +99,13 @@ function updateDuration(duration) {
    document.getElementById("minutes").innerHTML = minutes;
    document.getElementById("seconds").innerHTML = seconds;
 }
+
+/*=============== Faqs Section ===============*/
+
+const faqs = document.querySelectorAll(".faqs__container");
+
+faqs.forEach((faq) => {
+   faq.addEventListener("click", () => {
+      faq.classList.toggle("active");
+   });
+});
