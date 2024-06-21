@@ -520,8 +520,10 @@ height: auto;
   border-radius: 20px;
 }
 .contacts__container button:hover {
-  background-color: hsl(155, 100%, 18%);
-  transition: all 0.3s ease-in;
+  background: hsl(155, 100%, 18%);
+  color: black;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #065530, 0 0 10px #0f5f3a, 0 0 15px #00743e, 0 0 20px #03f484;
 }
 
 .contact__info {
